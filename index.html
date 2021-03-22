@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>TP1</title>
+        <script src="myComponents/index.js" type="module"></script>
+    </head>
+    <body>
+        <h1>Générateur de logo</h1>
+        <my-logo id="leLogo" text="Default text" couleur="black" animation="jello-horizontal"></my-logo>
+        <br>
+        <h2>Générer un logo aléatoirement en cliquant ici</h2>
+        <button onclick="traiteclick()">Genérer logo</button>
+        <br><br>
+        <my-logo-random id="leLogoRandom" text="" couleur="black" animation="jello-horizontal"></my-logo-random>
+    </body>
+
+    <script>
+        let logo = document.querySelector("#leLogoRandom");
+        function traiteclick() {
+            logo.random();
+        }
+    </script>
+</html>
